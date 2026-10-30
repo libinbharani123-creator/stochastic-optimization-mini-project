@@ -1,9 +1,6 @@
 # Multi-period inventory: learning an (s, S) policy by DP
 
-Course 21AIE321T — Stochastic Decision Making
-Extension of the newsvendor project.
 
----
 
 ## What it does
 
@@ -161,17 +158,3 @@ periods. The base-stock policy orders every period and pays `K` each time.
 
 ---
 
-## How this extends the newsvendor project
-
-| Newsvendor (previous) | `(s, S)` DP (this) |
-|---|---|
-| One decision per period | Continuous decision over infinite horizon |
-| No holding / backorder costs | `h` and `b` in every period |
-| No lead time | Explicit `L` |
-| No fixed cost | `K` per order (this is what makes `(s, S)`) |
-| Grid search over `Q` | Value iteration on `IP` |
-| Order quantity `Q ≈ 96` | `S ≈ 130`, `s ≈ 30` |
-
-Both solve `E[Profit(Q, D)]`-type objectives. The DP solves it *over time*
-under a state transition, which is why the optimal policy becomes `(s, S)`
-rather than a single number.
